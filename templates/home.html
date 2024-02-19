@@ -1,22 +1,33 @@
-{% extends '_base.html' %}
-
+{% extends '_base_home.html' %}
+{% load static %}
 {% block content %}
-    <div class="container">
-        <div class="row">
-
-            <div class="owl-carousel owl-theme">
-                <div class="item item-first">
-                    <div class="caption">
-                        <div class="col-md-offset-1 col-md-10">
-                            <h3>مشاوره خانواده</h3>
-                            <h1>سامانه نوبت دهی کلینیک تخصصی روان شناسی و مشاوره خانه</h1>
-                            <a href="#team" class="section-btn btn btn-default smoothScroll">درخواست مشاوره</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+     <div class="top-part-1">
+        <p>
+            <a href="{% url 'transportation:transportation' %}">حمل و نقل</a>
+        </p>
+    </div>
+    <div class="top-part-2">
+        <p>رنگ</p>
+    </div>
+    <div class="bottom-part-1">
+        <p>
+            محصولات پلیمری
+        </p>
+    </div>
+    <div class="bottom-part-2">
+        <p>
+            محصولات ساختمان
+        </p>
+    </div>
+    <div class="bottom-part-3">
+        <p>
+            خدمات ترخیص
+        </p>
+    </div>
+    <div class="bottom-part-4">
+        <p>
+            محصولات شیمیایی
+        </p>
     </div>
 
 {% endblock %}
