@@ -1,5 +1,4 @@
 env/
 venv/
-static/
 db.sqlite3
 .idea/

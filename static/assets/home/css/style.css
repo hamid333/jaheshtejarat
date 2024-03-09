@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'B_Yekan';
+    src: url('../../fonts/B_Yekan.eot');
+    src: url('../../fonts/B_Yekan.eot') format('embedded-opentype'), url('../../fonts/B_Yekan.woff') format('woff'), url('../../fonts/B_Yekan.ttf') format('truetype'), url('../../fonts/B_Yekan.svg') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'BTitrBold';
+    src: url('../../fonts/BTitrBold.eot');
+    src: url('../../fonts/BTitrBold.eot') format('embedded-opentype'), url('../../fonts/BTitrBold.woff') format('woff'), url('../../fonts/BTitrBold.ttf') format('truetype'), url('../../fonts/BTitrBold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'BZar';
+    src: url('../../fonts/BZar.eot');
+    src: url('../../fonts/BZar.eot') format('embedded-opentype'), url('../../fonts/BZar.woff') format('woff'), url('../../fonts/BZar.ttf') format('truetype'), url('../../fonts/BZar.svg') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 200vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+header {
+    font-family: BTitrBold;
+    width: 100%;
+    height: 100px;
+    background-color: #6aa534;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-part-1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/haml-o-naghl.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.top-part-2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.bottom-part-1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/polimeri.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.bottom-part-2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/sakhteman.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.bottom-part-3 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/tarkhis.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.bottom-part-4 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/shimeiaie.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+p {
+    font-family: BTitrBold;
+    padding: 0 80px;
+    background-color: #3f8f8bcf;
+    border-style: dotted;
+    border-radius: 20px;
+    color: #f1eded;
+    font-size: x-large;
+}
+
+a {
+    color: #f1eded;
+}
