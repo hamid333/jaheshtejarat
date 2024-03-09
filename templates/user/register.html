@@ -1,0 +1,81 @@
+{% extends 'user/base.html' %}
+{% block title %} ثبت نام کاربر {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="post" autocomplete="off" style=" text-align: right; direction: rtl;">
+        {% csrf_token %}
+        <h4 class="modal-title" style="font-family: BTitrBold">ثبت کاربر</h4>
+        <hr/>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="id_username" class="form-label requiredField">
+                    نام<span class="asteriskField">*</span>
+                </label>
+                {{ form.first_name }}
+            </div>
+            <div class="col-md-4">
+                <label for="id_username" class="form-label requiredField">
+                    نام خانوادگی<span class="asteriskField">*</span>
+                </label>
+                {{ form.last_name }}
+            </div>
+            <div class="col-md-4">
+                <label for="id_username" class="form-label requiredField">
+                    نام پدر<span class="asteriskField">*</span>
+                </label>
+                {{ form.father }}
+            </div>
+            <div class="col-md-12">
+                <label for="id_username" class="form-label requiredField">
+                    کد ملی<span class="asteriskField">*</span>
+                </label>
+                <input type="text" name="username" value="{{ list_for_random }}" class="form-control" required=""
+                       maxlength="150" autofocus="" id="id_username">
+            </div>
+
+
+            <div class="col-md-6">
+                <label for="id_mobile" class="form-label requiredField">
+                    همراه <span class="asteriskField">*</span>
+                </label>
+                {{ form.mobile }}
+            </div>
+            <div class="col-md-6">
+                <label for="id_phone" class="form-label requiredField">
+                    تلفن ثابت <span class="asteriskField">*</span>
+                </label>
+                {{ form.phone }}
+            </div>
+
+            <div class="col-md-6">
+                <label for="id_mobile" class="form-label requiredField">
+                    همراه پدر <span class="asteriskField">*</span>
+                </label>
+                {{ form.mobile_father }}
+            </div>
+            <div class="col-md-6">
+                <label for="id_phone" class="form-label requiredField">
+                    همراه مادر <span class="asteriskField">*</span>
+                </label>
+                {{ form.mobile_mather }}
+            </div>
+            <div class="col-md-12">
+                <label for="id_phone" class="form-label requiredField">
+                    آدرس <span class="asteriskField">*</span>
+                </label>
+                {{ form.address }}
+            </div>
+            <div class="col-md-12">
+                <label for="id_phone" class="form-label requiredField">
+                    شعبه ثبت نام : <span class="asteriskField">*</span>
+                </label>
+                {{ form.branch }}
+            </div>
+        </div>
+        <hr/>
+        <div class="modal-footer">
+            <a href="{% url 'home-index' %}" class="btn btn-default" data-dismiss="modal">لغو</a>
+            <button type="submit" class="btn btn-primary">ثبت</button>
+        </div>
+    </form>
+{% endblock %}

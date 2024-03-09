@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+
+{% include 'user/head.html' %}
+<title>{% block title %}  {% endblock %}</title>
+<body style="font-family: B_Yekan">
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('{% static 'user/images/bg-01.jpg' %}')">
+			<div class="wrap-login100">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+	{% include 'user/footer.html' %}
+
+</body>
+</html>
