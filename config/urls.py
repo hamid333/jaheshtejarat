@@ -11,6 +11,5 @@ urlpatterns = [
     path('Category/Transportation/', include('transportation.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
-    # path('login/', auth_view.LoginView.as_view(template_name="user/login.html", redirect_authenticated_user=True), name='login'),
-    # path('logout/', auth_view.LogoutView.as_view(template_name='user/logout.html'), name='logout'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

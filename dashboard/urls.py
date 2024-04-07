@@ -9,6 +9,7 @@ urlpatterns = [
     path('Transportation/Maritime/', views.transportation_maritime, name='transportation_maritime'),
     path('Transportation/About/', views.transportation_about, name='transportation_about'),
     path('Transportation/Members/', views.transportation_members, name='transportation_members'),
+    path('Transportation/Members/Update/<int:id>/', views.transportation_member_update, name='transportation_member_update'),
     path('Transportation/Certificate/', views.transportation_certificate, name='transportation_certificate'),
-    path('Transportation/Certificate/Update/<int:id>', views.transportation_certificate_update, name='transportation_certificate_update'),
+    path('Transportation/Certificate/Update/<int:id>/', views.transportation_certificate_update, name='transportation_certificate_update'),
 ]

@@ -1,25 +1,41 @@
 @font-face {
-    font-family: 'B_Yekan';
-    src: url('../../fonts/B_Yekan.eot');
-    src: url('../../fonts/B_Yekan.eot') format('embedded-opentype'), url('../../fonts/B_Yekan.woff') format('woff'), url('../../fonts/B_Yekan.ttf') format('truetype'), url('../../fonts/B_Yekan.svg') format('svg');
-    font-weight: normal;
-    font-style: normal
+    font-family: "IRANSans";
+    font-style: normal;
+    font-weight: bold;
+    src: url('../../fonts/IRANSansWeb_Bold.eot');
+    src: url('../../fonts/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/IRANSansWeb_Bold.woff') format('woff'),
+	url('../../fonts/IRANSansWeb_Bold.ttf') format('truetype');
+	font-display: swap;
 }
-
 @font-face {
-    font-family: 'BTitrBold';
-    src: url('../../fonts/BTitrBold.eot');
-    src: url('../../fonts/BTitrBold.eot') format('embedded-opentype'), url('../../fonts/BTitrBold.woff') format('woff'), url('../../fonts/BTitrBold.ttf') format('truetype'), url('../../fonts/BTitrBold.svg') format('svg');
-    font-weight: normal;
-    font-style: normal
+    font-family: "IRANSans";
+    font-style: normal;
+    font-weight:normal;
+    src: url('../../fonts/IRANSansWeb.eot');
+    src: url('../../fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/IRANSansWeb.woff') format('woff'),
+	url('../../fonts/IRANSansWeb.ttf') format('truetype');
+	font-display: swap;
 }
-
 @font-face {
-    font-family: 'BZar';
-    src: url('../../fonts/BZar.eot');
-    src: url('../../fonts/BZar.eot') format('embedded-opentype'), url('../../fonts/BZar.woff') format('woff'), url('../../fonts/BZar.ttf') format('truetype'), url('../../fonts/BZar.svg') format('svg');
-    font-weight: normal;
-    font-style: normal
+    font-family: "IRANSans";
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../fonts/IRANSansWeb_Medium.eot');
+    src: url('../../fonts/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/IRANSansWeb_Medium.woff') format('woff'),
+	url('../../fonts/IRANSansWeb_Medium.ttf') format('truetype');
+	font-display: swap;
+}
+@font-face {
+     font-family: "IRANSans";
+    font-weight:normal;
+    src: url('../../fonts/IRANSansWeb(FaNum).eot');
+    src: url('../../fonts/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/IRANSansWeb(FaNum).woff') format('woff'),
+	url('../../fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+   font-display: swap;
 }
 
 body {
@@ -36,16 +52,17 @@ body {
 }
 
 header {
-    font-family: BTitrBold;
+    font-family: IRANSans;
     width: 100%;
     height: 100px;
-    background-color: #6aa534;
+    background-color: rgba(140, 190, 92, 0.82);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .top-part-1 {
+    opacity: 0.3;
     width: 100%;
     height: 100%;
     background-image: url("../img/haml-o-naghl.jpg");
@@ -61,6 +78,7 @@ header {
 }
 
 .top-part-2 {
+    opacity: 0.3;
     width: 100%;
     height: 100%;
     background-image: url("../img/hero-bg.jpg");
@@ -76,6 +94,7 @@ header {
 }
 
 .bottom-part-1 {
+    opacity: 0.3;
     width: 100%;
     height: 100%;
     background-image: url("../img/polimeri.jpg");
@@ -91,6 +110,7 @@ header {
 }
 
 .bottom-part-2 {
+    opacity: 0.3;
     width: 100%;
     height: 100%;
     background-image: url("../img/sakhteman.jpg");
@@ -106,6 +126,7 @@ header {
 }
 
 .bottom-part-3 {
+    opacity: 0.3;
     width: 100%;
     height: 100%;
     background-image: url("../img/tarkhis.jpg");
@@ -121,6 +142,7 @@ header {
 }
 
 .bottom-part-4 {
+    opacity: 0.3;
     width: 100%;
     height: 100%;
     background-image: url("../img/shimeiaie.jpg");
@@ -135,8 +157,32 @@ header {
     font-weight: bold;
 }
 
+.top-part-1:hover {
+    opacity: 1;
+}
+
+.top-part-2:hover {
+    opacity: 1;
+}
+
+.bottom-part-1:hover {
+    opacity: 1;
+}
+
+.bottom-part-2:hover {
+    opacity: 1;
+}
+
+.bottom-part-3:hover {
+    opacity: 1;
+}
+
+.bottom-part-4:hover {
+    opacity: 1;
+}
+
 p {
-    font-family: BTitrBold;
+    font-family: IRANSans;
     padding: 0 80px;
     background-color: #3f8f8bcf;
     border-style: dotted;

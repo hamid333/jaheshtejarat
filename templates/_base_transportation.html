@@ -22,7 +22,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="font-family: B_Yekan">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="font-family: IRANSans">
 
 
 <div class="site-wrap" id="home-section">
@@ -96,12 +96,19 @@
                             <li><a href="#testimonials-section" class="nav-link underline">گواهینامه ها</a></li>
                             <li><a href="#blog-section" class="nav-link underline">اخبار</a></li>
                             <li><a href="#contact-section" class="nav-link underline">ارتباط با ما</a></li>
+                            {% if user.is_active %}
+                                <li><a href="{% url 'dashboard' %}" class="nav-link underline">مدیریت محتوا</a></li>
+{#                                <li><a href="{% url 'logout_view' %}" class="nav-link underline">خروج</a></li>#}
+                            {% else %}
+                                <li><a href="{% url 'login' %}" class="nav-link underline">ورود</a></li>
+                            {% endif %}
                         </ul>
                     </nav>
 
                 </div>
 
-                <div class="toggle-button d-inline-block d-lg-none"><a href="#"  class="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                                                                       class="site-menu-toggle py-5 js-menu-toggle text-black"><span
                         class="icon-menu h3"></span></a></div>
 
             </div>

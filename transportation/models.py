@@ -1,8 +1,10 @@
 from django.db import models
 
+from ckeditor.fields import RichTextField
 
 class Transportation_Air(models.Model):
-    body = models.TextField(verbose_name='متن', blank=True)
+    # body = models.TextField(verbose_name='متن', blank=True)
+    body = RichTextField()
     image = models.ImageField(default='avatar.jpg', upload_to="Transportation_Air/", verbose_name='تصویر', null=True,
                               blank=True)
 

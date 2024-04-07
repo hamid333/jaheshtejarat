@@ -1,21 +1,21 @@
 from django import forms
 from transportation.models import *
 
+from ckeditor.widgets import CKEditorWidget
+
+
 class Transportation_Air_Form(forms.ModelForm):
     image = forms.ImageField()
+    body = forms.CharField(widget=CKEditorWidget())
+
     class Meta:
         model = Transportation_Air
-        fields = [
-            'body',
-            'image',
-        ]
+        fields = '__all__'
 
-        widgets = {
-            'body': forms.Textarea(attrs={'class': 'form-control'}),
-        }
 
 class Transportation_Road_Form(forms.ModelForm):
     image = forms.ImageField()
+
     class Meta:
         model = Transportation_Road
         fields = [
@@ -30,6 +30,7 @@ class Transportation_Road_Form(forms.ModelForm):
 
 class Transportation_Maritime_Form(forms.ModelForm):
     image = forms.ImageField()
+
     class Meta:
         model = Transportation_Maritime
         fields = [
@@ -56,6 +57,7 @@ class Transportation_About_Form(forms.ModelForm):
 
 class Transportation_Members_Form(forms.ModelForm):
     image = forms.ImageField()
+
     class Meta:
         model = Transportation_Members
         fields = [
@@ -73,6 +75,7 @@ class Transportation_Members_Form(forms.ModelForm):
 
 class Transportation_Certificate_Form(forms.ModelForm):
     image = forms.ImageField()
+
     class Meta:
         model = Transportation_Certificate
         fields = [
