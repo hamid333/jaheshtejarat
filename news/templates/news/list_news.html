@@ -1,0 +1,46 @@
+{% extends 'admin/_base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title" style="float: right">لیست</h3>
+                </div>
+                <table class="table thead-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">عنوان</th>
+                        <th scope="col">تصویر</th>
+                        <th scope="col">متن</th>
+                        <th scope="col">عملیات</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in list %}
+                        <tr {% if item.status == 0 %}
+                            style="background-color: #e19494;"
+                        {% endif %} >
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <th scope="row">{{ item.name }}</th>
+                            <td><img src="{{ item.image.url }}" style="width: 60px"></td>
+                            <td>{{ item.content|safe|truncatechars:100 }}</td>
+                            <td>
+                                <a href="{% url 'news_transportation_update' item.id %}"
+                                   class="btn btn-info btn-sm">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="{% url 'news_transportation_update' item.id %}"
+                                   class="btn btn-danger btn-sm" onclick="return confirm('آیا مطمئن هستید ؟');">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

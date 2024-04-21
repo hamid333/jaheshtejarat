@@ -86,14 +86,44 @@
                         </li>
                     </ul>
                 </li>
-{#                <li class="nav-item">#}
-{#                    <a href="pages/gallery.html" class="nav-link">#}
-{#                        <i class="nav-icon far fa-image"></i>#}
-{#                        <p>#}
-{#                            Gallery#}
-{#                        </p>#}
-{#                    </a>#}
-{#                </li>#}
+
+
+                <li class="nav-item has-treeview {% if '/News/' in request.path %} menu-open{% endif %}">
+                    <a href="#" class="nav-link {% if '/News/' in request.path %}active{% endif %}">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            اخبار
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{% url 'news_transportation' %}"
+                               class="nav-link  {% if '/Add_News/' in request.path %}active{% endif %}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> ثبت اخبار حمل و نقل </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'List_News' %}"
+                               class="nav-link  {% if '/list_news_transportation/' in request.path %}active{% endif %}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> لیست اخبار حمل و نقل </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                {#                <li class="nav-item">#}
+                {#                    <a href="pages/gallery.html" class="nav-link">#}
+                {#                        <i class="nav-icon far fa-image"></i>#}
+                {#                        <p>#}
+                {#                            Gallery#}
+                {#                        </p>#}
+                {#                    </a>#}
+                {#                </li>#}
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

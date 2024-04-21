@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import *
-
+from news.models import News_Transportation
 
 # Create your views here.
 
@@ -9,10 +9,12 @@ def transportation(request):
     about = Transportation_About.objects.order_by('-id').first()
     members = Transportation_Members.objects.filter(status=1)
     certificate = Transportation_Certificate.objects.filter(status=1)
+    news = News_Transportation.objects.all().order_by('-id')[:4]
     context = {
         'about': about,
         'members': members,
         'certificate': certificate,
+        'news':news
     }
     return render(request, 'transportation/transportation.html', context)
 

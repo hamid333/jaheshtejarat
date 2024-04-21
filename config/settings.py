@@ -194,7 +194,7 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
         # 'height': 291,
-        # 'width': '100%',
+        'width': '100%',
         # 'filebrowserWindowHeight': 725,
         # 'filebrowserWindowWidth': 940,
         # 'toolbarCanCollapse': True,
@@ -236,7 +236,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SESSION_COOKIE_AGE = 600  # 600 seconds = 10 minutes
+SESSION_COOKIE_AGE = 1200  # 600 seconds = 10 minutes
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 

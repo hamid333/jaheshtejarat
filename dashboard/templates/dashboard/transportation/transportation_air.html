@@ -1,51 +1,87 @@
 {% extends 'admin/_base.html' %}
 {% load static %}
 {% block content %}
-    <div class="card card-info">
-        <div class="card-header">
-            <div class="card-tools" style="float: left">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i>
-                </button>
-            </div>
-            <h3 class="card-title" style="float: right">حمل و نقل هوایی</h3>
 
-        </div>
-
-        <form method="post" class="form-horizontal" enctype="multipart/form-data" style="margin: 20px">
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        <span>{{ message }} .</span>
-                    </div>
-                {% endfor %}
-            {% endif %}
-            {% csrf_token %}
-            {{ form.media }}
-            <div class="card-body">
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 control-label">تصویر</label>
-                    <div class="col-sm-10">
-                        {{ form.image }}
-                    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title" style="float: right"> حمل و نقل هوایی </h3>
                 </div>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 control-label">متن</label>
-                    <div class="col-sm-10">
-                        {{ form.body }}
-                    </div>
-                </div>
+                <form method="post" class="form-horizontal" enctype="multipart/form-data" style="margin: 20px">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                <span>{{ message }} .</span>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    {% csrf_token %}
+                    {{ form.media }}
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 control-label">متن</label>
+                            <div class="col-sm-10">
+                                {{ form.body }}
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 control-label">تصویر</label>
+                            <div class="col-sm-10">
+                                {{ form.image }}
+                            </div>
+                        </div>
 
-            </div>
-            <div class="card-footer">
+                    </div>
+                    <div class="card-footer">
                         <button type="submit" class="btn btn-info">ثبت</button>
                     </div>
-        </form>
-        <!-- /.card-body -->
-        <div class="card-footer">
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title" style="float: right">لیست</h3>
+                </div>
+                <table class="table thead-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">تصویر</th>
+                        <th scope="col">متن</th>
+                        <th scope="col">عملیات</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in air %}
+                        <tr {% if item.status == 0 %}
+                            style="background-color: #e19494;"
+                        {% endif %} >
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td><img src="{{ item.image.url }}" style="width: 60px"></td>
+                            <td>{{ item.body|safe|truncatechars:20 }}</td>
+                            <td>
+                                <a href="{% url 'transportation_air_update' item.id %}"
+                                   class="btn btn-info btn-sm">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="{% url 'transportation_air_delete' item.id %}"
+                                   class="btn btn-danger btn-sm" onclick="return confirm('آیا مطمئن هستید ؟');">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
 
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
+
+
+
 
 {% endblock %}

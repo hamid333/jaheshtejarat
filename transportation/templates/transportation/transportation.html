@@ -123,8 +123,8 @@
                 </div>
             </div>
 
-        <div class="owl-carousel nonloop-block-13">
-                    {% for item in members %}
+            <div class="owl-carousel nonloop-block-13">
+                {% for item in members %}
                     <div>
                         <div class="block-testimony-1 text-center">
                             <blockquote class="mb-4">
@@ -136,8 +136,8 @@
                             <p class="mb-4">{{ item.body }}.</p>
                         </div>
                     </div>
-                    {% endfor %}
-                </div>
+                {% endfor %}
+            </div>
         </div>
         <div class="block__73694 site-section border-top" id="why-us-section">
             <div class="container">
@@ -181,16 +181,16 @@
 
                 <div class="owl-carousel nonloop-block-13">
                     {% for item in certificate %}
-                    <div>
-                        <div class="block-testimony-1 text-center">
-                            <blockquote class="mb-4">
-                                <p>
-                                    <img src="{{ item.image.url }}">
-                                </p>
-                            </blockquote>
-                            <h3 class="font-size-20 text-black">{{ item.name }}</h3>
+                        <div>
+                            <div class="block-testimony-1 text-center">
+                                <blockquote class="mb-4">
+                                    <p>
+                                        <img src="{{ item.image.url }}">
+                                    </p>
+                                </blockquote>
+                                <h3 class="font-size-20 text-black">{{ item.name }}</h3>
+                            </div>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
 
@@ -206,41 +206,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="mb-5 d-block blog-entry" data-aos="fade-right" data-aos-delay="">
-                            <a href="single.html" class="blog-thumbnail mb-3 d-block"><img
-                                    src="{% static '/assets/transportation/images/depot_img_1.jpg' %}" alt="Image"
-                                    class="img-fluid"></a>
-                            <div class="blog-excerpt">
-                                <span class="d-block text-muted">Apr 19, 2019</span>
-                                <h2 class="h4  mb-3"><a href="single.html">Knowing the Difference Is Key to Effective
-                                    Logistics</a></h2>
+                <div class="row" style="direction: rtl;    text-align: right;">
+                    {% for item in news %}
+                        <div class="col-lg-6">
+                            <div class="mb-5 d-block blog-entry" data-aos="fade-right" data-aos-delay="">
+                                <a href="single.html" class="blog-thumbnail mb-3 d-block"><img
+                                        src="{{ item.image.url }}" alt="Image"
+                                        class="img-fluid"></a>
+                                <div class="blog-excerpt">
+                                    <span class="d-block text-muted">{{ item.created_at }}</span>
+                                    <h2 class="h4  mb-3"><a href="{{ item.slug }}">{{ item.name }}</a></h2>
 
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                    Consonantia, there live the blind texts</p>
-                                <p><a href="single.html" class="text-primary">Read More</a></p>
+                                    <p>{{ item.content|safe|truncatechars:100 }}</p>
+                                    <p><a href="{{ item.slug }}" class="text-primary">Read More</a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="mb-5 d-block blog-entry" data-aos="fade-right" data-aos-delay="">
-                            <a href="single.html" class="blog-thumbnail mb-3 d-block"><img
-                                    src="{% static '/assets/transportation/images/depot_img_2.jpg' %}" alt="Image"
-                                    class="img-fluid"></a>
-                            <div class="blog-excerpt">
-                                <span class="d-block text-muted">Apr 19, 2019</span>
-                                <h2 class="h4  mb-3"><a href="single.html">Knowing the Difference Is Key to Effective
-                                    Logistics</a></h2>
-
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                    Consonantia, there live the blind texts</p>
-                                <p><a href="single.html" class="text-primary">Read More</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    {% endfor %}
                 </div>
             </div>
         </div>

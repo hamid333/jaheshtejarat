@@ -9,6 +9,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('dashboard/', include('dashboard.urls')),
     path('Category/Transportation/', include('transportation.urls')),
+    path('Category/News/', include('news.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
